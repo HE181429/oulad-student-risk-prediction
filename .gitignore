@@ -1,0 +1,76 @@
+# Scratch query file rewritten on every ClickHouse call (build_data_understanding_nb)
+.ch_query.sql
+
+# ---- XAI intermediate cache (per-seed / per-checkpoint SHAP vectors) ----
+# Resumable checkpoint for tools.make_xai_analysis; the final xai_*.csv are committed.
+reports/tables/_xai_cache/
+# Per-fold OOF cache for tools.make_threshold_validation (final CSV is committed).
+reports/tables/_thr_cache/
+# Stamp files for the resumable full renumber run (tools/renumber.sh).
+.renumber_stamps/
+
+# ---- Data (never commit raw or intermediate datasets) ----
+data/raw/
+data/interim/
+data/checkpoints/
+*.parquet
+*.pkl
+# Trained model bundles are regenerable from src.modeling.train (benchmark) — only
+# a deliberately-packaged final model should be versioned, not the 30 checkpoints.
+*.joblib
+# Large data archive / local ClickHouse binary (too big for git, regenerable)
+data.zip
+clickhouse
+!data/.gitkeep
+# Train/test split: keep the canonical id list (committed); the materialised
+# train/test parquets are regenerable and stay ignored via the *.parquet rule.
+!data/splits/test_student_ids.csv
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+.python-version
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ---- Testing & coverage ----
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---- Tooling caches ----
+.mypy_cache/
+.ruff_cache/
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- Secrets ----
+.env
+*.local
+
+# --- task ----
+task/
+
+# clickhouse-local binary (182MB tool, do not version)
+/clickhouse
+# MS Office lock temp files
+~$*
+# LibreOffice lock files
+.~lock.*#
+# Bootstrap cache for tools.make_paper_extras (final CSVs are committed).
+reports/tables/_paper_cache/
