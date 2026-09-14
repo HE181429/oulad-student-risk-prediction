@@ -166,18 +166,7 @@ Subsequent phases (Modeling, Benchmarking, XAI) have not yet started and their r
 
 ## 11. Citation
 
-If you use this work, please cite it as:
 
-```bibtex
-@misc{group1_2026_timeaware_xai_oulad,
-  title        = {Time-Aware Explainable Machine Learning for Early
-                  At-Risk Student Prediction on OULAD},
-  author       = {S{\o}n and Khoa and An and {\DJ}{\'u}c and Ph{\'u}c and B{\`i}nh},
-  howpublished = {DSP391m Data Science Capstone Project, FPT University},
-  year         = {2026},
-  note         = {Supervisor: Nguy{\~{\^e}}n Th{\d{i}} Ho{\`a}ng Y{\'{\^e}}n}
-}
-```
 
 ## 12. References
 
