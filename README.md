@@ -153,16 +153,9 @@ This project is designed so that an external reader can reproduce every result:
 
 ## 9. Team & Responsibilities
 
-Group 1, DSP391m — FPT University. Supervisor: **Nguyễn Thị Hoàng Yến**.
+Group 2, DSP391m — FPT University. Supervisor: **Hung Pham Duy**.
 
-| Member | Role | Responsibility |
-| --- | --- | --- |
-| Khoa | Methodology Lead | Predictive modelling, time-aware prediction (Themes 1 & 2) |
-| Bình | XAI Lead | Explainability (SHAP/LIME), explanation stability (Theme 3) |
-| Đức | Modeling Lead | Model development, class-imbalance handling (Themes 1 & 4) |
-| Phúc | Implementation Lead | Data pipeline, experiment harness, evaluation |
-| Sơn | Literature Review Lead | Introduction, literature review, references |
-| An | Backend & Dashboard Lead | Model packaging, Streamlit dashboard (Phase 6a) |
+
 
 ## 10. Project Status
 
